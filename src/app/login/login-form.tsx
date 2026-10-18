@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, type FormEvent } from "react";
 
 async function readError(response: Response): Promise<string> {
@@ -42,7 +43,7 @@ export default function LoginForm({ authConfigured }: { authConfigured: boolean 
     <main className="login-screen">
       <section className="login-card">
         <Link className="brand login-brand" href="/" aria-label="Billwise home">
-          <span className="brand-mark">b</span>
+          <Image className="brand-mark" src="/brand-logo.png" alt="" width={32} height={25} />
           <span>billwise<span className="brand-period">.</span></span>
         </Link>
         <div className="eyebrow">YOUR PRIVATE BILLING WORKSPACE</div>

@@ -56,19 +56,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   text-decoration: none;
 }
 .brand-mark {
-  display: grid;
+  display: block;
   width: 32px;
   height: 32px;
-  place-items: center;
-  border-radius: 10px;
-  color: white;
-  background: var(--green);
-  font-family: Georgia, serif;
-  font-size: 24px;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: -2px;
-  padding: 0 3px 5px 0;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
 .brand-period, .heading-dot { color: #71a589; }
 .workspace-label, .nav-label, .eyebrow {

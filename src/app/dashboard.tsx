@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import type { Customer, DashboardData, Invoice } from "@/lib/types";
 
@@ -223,7 +224,7 @@ export default function Dashboard() {
     <main className="app-shell">
       <aside className="sidebar">
         <Link className="brand" href="/" aria-label="Billwise home">
-          <span className="brand-mark">b</span>
+          <Image className="brand-mark" src="/brand-logo.png" alt="" width={32} height={25} />
           <span>billwise<span className="brand-period">.</span></span>
         </Link>
         <div className="workspace-label">WORKSPACE</div>
