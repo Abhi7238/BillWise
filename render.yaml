@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: billwise
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /login
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: BILLING_APP_PASSWORD
+        sync: false
+      - key: AUTH_SECRET
+        sync: false
+      - key: BUSINESS_NAME
+        value: Your Business
+      - key: BUSINESS_EMAIL
+        sync: false
+      - key: BUSINESS_ADDRESS
+        sync: false
+      - key: CURRENCY
+        value: USD
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_FROM
+        sync: false
